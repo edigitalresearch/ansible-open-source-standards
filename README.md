@@ -8,6 +8,8 @@ Welcome to the Ansible OSS guide. This Github pages site serves as a living docu
 * A role should be single purpose
 * A role should be fully documented
 
+This pages site serves as a living document and like all of our open source software pull requests are welcome. The information here is intended to evolve over time as we improve our development practices, as such there are no hard and fast rules. Use them as a guide and enjoy!
+
 ## Contents
 
 1. Role Anatomy
@@ -20,11 +22,13 @@ Welcome to the Ansible OSS guide. This Github pages site serves as a living docu
 1. Role Organisation
   * Task Separation
   * Task Naming
+  * Adapting other roles
 1. Role Documentation
   * README Template
 1. Contributing to Maru EDR (OSS)
   * Expected Workflow
-  * Licensing & Ansible Galaxy
+  * Reporting Issues
+  * Licensing
 
 ### Role Anatomy - Minimum Viable Role (MVR)
 
@@ -97,6 +101,10 @@ How to organise your role code
 
 *TBA*
 
+#### Adapting other roles
+
+*TBA*
+
 ### Role Documentation
 
 Defining documentation standards
@@ -131,8 +139,22 @@ How to get involved
 
 #### Expected Workflow
 
-*TBA*
+When starting a new role or improving an existing role we use the following process:
 
-#### Licensing & Ansible Galaxy
+* Explore other available roles first - often times someone will have created one already. If you find a suitable role as a base please fork it and bring it in line with these standards. Otherwise create a new repo and follow these guidelines
+* Always fork the repo from `edigitalresearch` before starting work - Once forked do not work on the master branch. Create a feature branch and do development work there
+* Once ready for a release to your forked `master` branch - rebase first! Nobody likes lots of commits. Please squash them to a single release commit before merging to your master branch. See [https://www.atlassian.com/git/tutorials/merging-vs-rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+* Now your work is on your forked `master` open a PR back to the upstream
+* Your PR should be reviewed by x2 reviewers before being merged. Reviewers use these notes for reference.
+* When a PR has been merged - tag a new release on Github and close off any relevant issues.
+* Rinse and repeat - Any forks should periodically pull changes from upstream before working on new features
 
-*TBA*
+#### Reporting Issues
+
+* Do open up issues with the relevant role - any features or bug requests are welcome
+* Keep the opened issue focused on a single role. Problems with dependent roles should be discussed elsewhere
+* Ensure PR's have closing tags attached - For example if your PR fixes issue #1 ensure it has `Closes #1` in the PR body. That way onced merged we can close issues automatically
+
+#### Licensing
+
+All roles are licensed under MIT and should include a `LICENSE.md` within the role.
