@@ -1,5 +1,7 @@
 ## Maru / EDR - Ansible Open Source Standards
 
+[https://edigitalresearch.github.io/ansible-open-source-standards/](https://edigitalresearch.github.io/ansible-open-source-standards/)
+
 Welcome to the Ansible OSS guide. This Github pages site serves as a living document for building EDR ready Ansible roles. It strives for best practices and uniformity between developed roles. Any developed roles should follow these principles:
 
 * A role should be deployable as a stand alone unit
